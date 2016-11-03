@@ -1,0 +1,96 @@
+{
+  "version": 2,
+  "exports": {
+    "ML.Domain.Core/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5.2",
+      "compile": {
+        "bin/Debug/ML.Domain.Core.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/ML.Domain.Core.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/ML.Domain.Core.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "ML.Domain.Model/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5.2",
+      "compile": {
+        "bin/Debug/ML.Domain.Model.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/ML.Domain.Model.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/ML.Domain.Model.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "ML.Infrastructure.Common/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5.2",
+      "compile": {
+        "bin/Debug/ML.Infrastructure.Common.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/ML.Infrastructure.Common.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/ML.Infrastructure.Common.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "ML.Infrastructure.Repository/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5.2",
+      "compile": {
+        "bin/Debug/ML.Infrastructure.Repository.dll": {}
+      },
+      "runtime": {
+        "../../packages/Dapper.1.50.2/lib/net451/Dapper.dll": {},
+        "../../packages/MySql.Data.6.9.9/lib/net45/MySql.Data.dll": {},
+        "bin/Debug/ML.Infrastructure.Repository.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/ML.Infrastructure.Repository.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "ML.Infrastructure.SearchTool/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5.2",
+      "compile": {
+        "bin/Debug/ML.Infrastructure.SearchTool.dll": {}
+      },
+      "runtime": {
+        "../../packages/Dos.PanGu.2.4.3.0/lib/net40/Dos.PanGu.dll": {},
+        "../../packages/Dos.PanGu.Lucene.Analyzer.2.4.2.0/lib/net40/Dos.PanGu.Lucene.Analyzer.dll": {},
+        "../../packages/Lucene.Net.3.0.3/lib/NET40/Lucene.Net.dll": {},
+        "../../packages/SharpZipLib.0.86.0/lib/20/ICSharpCode.SharpZipLib.dll": {},
+        "bin/Debug/ML.Infrastructure.SearchTool.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/ML.Infrastructure.SearchTool.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    }
+  }
+}
