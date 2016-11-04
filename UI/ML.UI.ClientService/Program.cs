@@ -13,7 +13,9 @@ namespace ML.UI.ClientService
     {
         private static DhtInfoRepository Repository = new DhtInfoRepository();
 
-        private static readonly string TempFilePath = AppDomain.CurrentDomain.BaseDirectory + @"\temp";
+        private static readonly string TempFilePath = AppDomain.CurrentDomain.BaseDirectory + @"temp\";
+
+        private static readonly string FilePath = TempFilePath + "pageIndex.txt";
 
         private static bool _isStop = false;
 
@@ -67,11 +69,11 @@ namespace ML.UI.ClientService
                 Directory.CreateDirectory(TempFilePath);
                 return 1;
             }
-            if (!File.Exists(TempFilePath + @"\tem.txt"))
+            if (!File.Exists(FilePath))
             {
                 return 1;
             }
-            var line = File.ReadAllLines(TempFilePath + @"\tem.txt", Encoding.UTF8);
+            var line = File.ReadAllLines(FilePath, Encoding.UTF8);
             int pageIndex;
             int.TryParse(line[0], out pageIndex);
             return pageIndex;
@@ -83,7 +85,7 @@ namespace ML.UI.ClientService
             {
                 Directory.CreateDirectory(TempFilePath);
             }
-            File.WriteAllText(TempFilePath + @"\tem.txt", pageIndex.ToString(), Encoding.UTF8);
+            File.WriteAllText(FilePath, pageIndex.ToString(), Encoding.UTF8);
         }
     }
 }

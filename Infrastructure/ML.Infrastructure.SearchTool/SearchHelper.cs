@@ -27,7 +27,7 @@ namespace ML.Infrastructure.SearchTool
 
         private static readonly bool IsExists = IndexReader.IndexExists(WriterDirectory);
 
-        public static string IndexPath => _indexPath ?? (_indexPath = AppDomain.CurrentDomain.BaseDirectory + @"\Index");
+        public static string IndexPath => _indexPath ?? (_indexPath = AppDomain.CurrentDomain.BaseDirectory + @"Index");
 
         private static FSDirectory WriterDirectory => _writerDirectory ?? (_writerDirectory = FSDirectory.Open(new DirectoryInfo(IndexPath)));
 
