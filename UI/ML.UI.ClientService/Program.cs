@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ML.Infrastructure.Repository;
+using ML.Infrastructure.Repository.Entity;
 using ML.Infrastructure.SearchTool;
 
 namespace ML.UI.ClientService
@@ -39,7 +40,16 @@ namespace ML.UI.ClientService
         private static async Task<bool> CreateIndex()
         {
             var pageIndex = ReadTempFile();
-            var result = Repository.GetList(pageIndex, PageSize);
+            List<DhtInfo> result;
+            try
+            {
+                result = Repository.GetList(pageIndex, PageSize);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return true;
+            }
             if (result.Count < PageSize)
             {
                 Console.WriteLine("all of done!!");
