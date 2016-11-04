@@ -22,7 +22,7 @@ namespace ML.UI.ClientService
         static void Main(string[] args)
         {
             Start();
-
+            Console.ReadKey();
         }
 
         private static async void Start()
@@ -41,7 +41,7 @@ namespace ML.UI.ClientService
             if (result.Count < PageSize)
             {
                 Console.WriteLine("all of done!!");
-                return false;
+                return true;
             }
             foreach (var dhtInfo in result)
             {
