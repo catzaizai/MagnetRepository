@@ -13,7 +13,7 @@ namespace ML.Infrastructure.Repository
 {
     public class BaseRepository<TEntity>
     {
-        protected const string ConnectionStr = "Database=p2pspider;Data Source=localhost;User Id=root;Password=root;pooling=false;CharSet=utf8;port=3306;";
+        protected const string ConnectionStr = "Database=p2pspider;Data Source=108.171.211.103;User Id=root;Password=123456@sw;pooling=false;CharSet=utf8;port=3306;";
 
         public List<TEntity> GetList(string sql)
         {

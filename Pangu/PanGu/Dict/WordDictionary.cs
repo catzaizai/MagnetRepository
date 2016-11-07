@@ -162,7 +162,6 @@ namespace PanGu.Dict
 
         private WordDictionaryFile LoadFromBinFile(String fileName, out string verNumStr)
         {
-            //PanGu.Framework.IOHelper.WriteLog("LoadFromBinFilefileName=" + fileName);
             WordDictionaryFile dictFile = new WordDictionaryFile();
             dictFile.Dicts = new List<WordAttribute>();
 
