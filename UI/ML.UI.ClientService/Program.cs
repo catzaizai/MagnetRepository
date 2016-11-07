@@ -20,7 +20,7 @@ namespace ML.UI.ClientService
 
         private static bool _isStop = false;
 
-        private const int PageSize = 100;
+        private const int PageSize = 1000;
 
         static void Main(string[] args)
         {
