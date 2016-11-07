@@ -79,7 +79,7 @@ namespace PanGu.Setting
             path = System.IO.Path.GetFullPath(path);
             System.IO.Directory.SetCurrentDirectory(currentDir);
 
-            return Path.AppendDivision(path, '\\');
+            return "/" + Path.AppendDivision(path, '/');
 
         }
 
