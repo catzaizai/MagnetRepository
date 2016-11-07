@@ -18,7 +18,7 @@ namespace PanGu.Setting
 
         public SettingLoader()
         {
-            string fileName = PanGu.Framework.Path.GetAssemblyPath() + "PanGu.xml";
+            string fileName = PanGu.Framework.Path.GetAssemblyPath() + "pangu/PanGu.xml";
             Load(fileName);
         }
     }

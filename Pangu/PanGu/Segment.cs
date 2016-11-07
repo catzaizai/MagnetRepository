@@ -728,19 +728,36 @@ namespace PanGu
 
         #region Initialization
 
-        static private void LoadDictionary()
+        static private void LoadDictionary(string fileName)
         {
+            String currentDir="";
+            string sysdir = "";
+            if (!string.IsNullOrEmpty(fileName))
+            {
+                System.IO.DirectoryInfo info = new System.IO.DirectoryInfo(fileName);
+                currentDir = info.Parent.Parent.FullName;
+                currentDir += "/";
+            }
+            else
+            {
+                currentDir = PanGu.Framework.Path.GetAssemblyPath();
+            }
+            sysdir = Setting.PanGuSettings.Config.GetDictionaryPath(fileName);
+            //IOHelper.WriteLog("path1=" + currentDir);
             _WordDictionary = new PanGu.Dict.WordDictionary();
-            string dir = Setting.PanGuSettings.Config.GetDictionaryPath();
+            string dir = currentDir + sysdir + "/";
+            IOHelper.WriteLog("dir="+dir + "Dict.dct");
             _WordDictionary.Load(dir + "Dict.dct");
 
             _ChsName = new PanGu.Dict.ChsName();
-            _ChsName.LoadChsName(Setting.PanGuSettings.Config.GetDictionaryPath());
-
+            //IOHelper.WriteLog("_ChsName1=" + _ChsName);
+            _ChsName.LoadChsName(currentDir + sysdir + "/");
+            //IOHelper.WriteLog("_ChsName2=" + _ChsName);
 
             _WordDictionary.ChineseName = _ChsName;
-
+             //IOHelper.WriteLog("_ChsName3=" + _ChsName);
             _StopWord = new PanGu.Dict.StopWord();
+            //IOHelper.WriteLog("dir=" + dir + "Stopword.txt");
             _StopWord.LoadStopwordsDict(dir + "Stopword.txt");
 
             _Synonym = new PanGu.Dict.Synonym();
@@ -750,7 +767,7 @@ namespace PanGu
                 _Synonym.Load(dir);
             }
 
-            _DictLoader = new PanGu.Dict.DictionaryLoader(Setting.PanGuSettings.Config.GetDictionaryPath());
+            _DictLoader = new PanGu.Dict.DictionaryLoader(sysdir);
         }
 
         private static void InitInfinitiveVerbTable()
@@ -792,14 +809,20 @@ namespace PanGu
 
         }
 
-
+        /// <summary>
+        /// 不传入配置路径可能报错,已经改了路径读取的东西,请把pangu的东西放bin目录下 /bin/PanGu.xml ,bin
+        /// </summary>
         public static void Init()
         {
             Init(null);
         }
-
+        /// <summary>
+        /// 传入配置文件初始化
+        /// </summary>
+        /// <param name="fileName"></param>
         public static void Init(string fileName)
         {
+            //IOHelper.WriteLog("InitfileName1=" + fileName);
             lock (_LockObj)
             {
                 if (_Inited)
@@ -809,23 +832,25 @@ namespace PanGu
 
                 InitInfinitiveVerbTable();
 
-                if (fileName == null)
+                if (string.IsNullOrEmpty(fileName))
                 {
                     Setting.SettingLoader loader = new PanGu.Setting.SettingLoader();
+                    //IOHelper.WriteLog("InitfileName2=" + fileName);
                 }
                 else
                 {
                     Setting.SettingLoader loader = new PanGu.Setting.SettingLoader(fileName);
+                    //IOHelper.WriteLog("InitfileName3=" + fileName);
                 }
 
-                LoadDictionary();
+                LoadDictionary(fileName);
 
                 _Inited = true;
 
                 _Wildcard = new PanGu.Dict.Wildcard(Setting.PanGuSettings.Config.MatchOptions,
                     Setting.PanGuSettings.Config.Parameters);
 
-                string dir = Setting.PanGuSettings.Config.GetDictionaryPath();
+                string dir = Setting.PanGuSettings.Config.GetDictionaryPath(fileName);
 
                 if (Setting.PanGuSettings.Config.MatchOptions.WildcardOutput)
                 {

@@ -107,7 +107,7 @@ namespace PanGu.Dict
             {
                 if (!_Init)
                 {
-                    string dir = Setting.PanGuSettings.Config.GetDictionaryPath();
+                    string dir = Setting.PanGuSettings.Config.GetDictionaryPath("");
                     Load(dir);
                 }
             }

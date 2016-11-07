@@ -58,6 +58,7 @@
     <Compile Include="Framework\AppendList.cs" />
     <Compile Include="Framework\DFA.cs" />
     <Compile Include="Framework\Instance.cs" />
+    <Compile Include="Framework\IOHelper.cs" />
     <Compile Include="Framework\Lexical.cs" />
     <Compile Include="Framework\Lock.cs" />
     <Compile Include="Framework\PorterStemmer.cs" />
@@ -88,17 +89,6 @@
       <LastGenOutput>AnalyzerResource.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\ChsDoubleName1.txt" />
-    <EmbeddedResource Include="Resources\ChsDoubleName2.txt" />
-    <EmbeddedResource Include="Resources\ChsSingleName.txt" />
-    <EmbeddedResource Include="Resources\Stopword.txt" />
-    <EmbeddedResource Include="Resources\Synonym.txt" />
-    <EmbeddedResource Include="Resources\Wildcard.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Dict.dct" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

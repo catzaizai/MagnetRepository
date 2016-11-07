@@ -24,13 +24,21 @@ namespace PanGu.Framework
 {
     public class Path
     {
+        /// <summary>
+        /// 从根据程序集位置,也就是从bin获取,所以不管config传入什么位置都是错的..
+        /// </summary>
+        /// <returns></returns>
         static public string GetAssemblyPath()
         {
             const string _PREFIX = @"file:///";
             string codeBase = System.Reflection.Assembly.GetExecutingAssembly().CodeBase;
-
             codeBase = codeBase.Substring(_PREFIX.Length, codeBase.Length - _PREFIX.Length);
-            return "/" + System.IO.Path.GetDirectoryName(codeBase) + @"/";
+            string path = System.IO.Path.GetDirectoryName(codeBase) + System.IO.Path.DirectorySeparatorChar;
+            if (path.IndexOf(':') < 0)
+            {
+                path = System.IO.Path.DirectorySeparatorChar + path;
+            }
+            return path;
         }
 
         static public string ProcessDirectory

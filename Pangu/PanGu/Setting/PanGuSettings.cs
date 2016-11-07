@@ -27,8 +27,6 @@ namespace PanGu.Setting
     {
         #region static members
         private static PanGuSettings _Config;
-
-        private const char PlatFormBase = '/';
         
         public static PanGuSettings Config
         {
@@ -72,16 +70,35 @@ namespace PanGu.Setting
 
         #endregion
 
-        public string GetDictionaryPath()
+        public string GetDictionaryPath(string fileName)
         {
+//             if (string.IsNullOrEmpty(fileName))
+//             {
+//                 string path = DictionaryPath;
+//                 //IOHelper.WriteLog("path2=" + path);
+//                 string currentDir = System.IO.Directory.GetCurrentDirectory();
+//                 //IOHelper.WriteLog("path3=" + currentDir);
+//                 System.IO.Directory.SetCurrentDirectory(Framework.Path.GetAssemblyPath());
+//                 //IOHelper.WriteLog("path4=" + path);
+//                 path = System.IO.Path.GetFullPath(path);
+//                 //IOHelper.WriteLog("path5=" + path);
+//                 System.IO.Directory.SetCurrentDirectory(currentDir);
+//                 //IOHelper.WriteLog("path6=" + currentDir);
+//                 if (path[path.Length - 1] != System.IO.Path.DirectorySeparatorChar)
+//                 {
+//                     path = path + System.IO.Path.DirectorySeparatorChar;
+//                 }
+//                 //IOHelper.WriteLog("path7=" + path);
+//                 return path;
+//             }
+//             else
+//             {
+//                 string path = DictionaryPath;
+//                 return path;
+//             }
             string path = DictionaryPath;
-
-            string currentDir = System.IO.Directory.GetCurrentDirectory();
-            System.IO.Directory.SetCurrentDirectory(Path.GetAssemblyPath());
-            path = System.IO.Path.GetFullPath(path);
-            System.IO.Directory.SetCurrentDirectory(currentDir);
-
-            return Path.AppendDivision(path, PlatFormBase);
+            return path;
+            //return Path.AppendDivision(path, '\\');
 
         }
 

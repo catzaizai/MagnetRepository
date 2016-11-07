@@ -178,8 +178,8 @@ namespace PanGu.Dict
 
         public void LoadChsName(string dictPath)
         {
-            dictPath = Framework.Path.AppendDivision(dictPath, '/');
-
+            //dictPath = Framework.Path.AppendDivision(dictPath, System.IO.Path.DirectorySeparatorChar);
+            //PanGu.Framework.IOHelper.WriteLog("-------x-------:" + dictPath +"|"+ ChsSingleNameFileName);
             LoadNameDict(dictPath + ChsSingleNameFileName, ref _SingleNameDict);
             LoadNameDict(dictPath + ChsDoubleName1FileName, ref _DoubleName1Dict);
             LoadNameDict(dictPath + ChsDoubleName2FileName, ref _DoubleName2Dict);
