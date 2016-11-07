@@ -30,7 +30,7 @@ namespace PanGu.Framework
             string codeBase = System.Reflection.Assembly.GetExecutingAssembly().CodeBase;
 
             codeBase = codeBase.Substring(_PREFIX.Length, codeBase.Length - _PREFIX.Length);
-            return System.IO.Path.GetDirectoryName(codeBase) + @"/";
+            return "/" + System.IO.Path.GetDirectoryName(codeBase) + @"/";
         }
 
         static public string ProcessDirectory

@@ -27,6 +27,8 @@ namespace PanGu.Setting
     {
         #region static members
         private static PanGuSettings _Config;
+
+        private const char PlatFormBase = '/';
         
         public static PanGuSettings Config
         {
@@ -75,11 +77,11 @@ namespace PanGu.Setting
             string path = DictionaryPath;
 
             string currentDir = System.IO.Directory.GetCurrentDirectory();
-            System.IO.Directory.SetCurrentDirectory(Framework.Path.GetAssemblyPath());
+            System.IO.Directory.SetCurrentDirectory(Path.GetAssemblyPath());
             path = System.IO.Path.GetFullPath(path);
             System.IO.Directory.SetCurrentDirectory(currentDir);
 
-            return "/" + Path.AppendDivision(path, '/');
+            return Path.AppendDivision(path, PlatFormBase);
 
         }
 
