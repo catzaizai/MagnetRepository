@@ -764,7 +764,7 @@ namespace PanGu
 
             if (Setting.PanGuSettings.Config.MatchOptions.SynonymOutput)
             {
-                //_Synonym.Load(dir);
+                _Synonym.Load(dir);
             }
 
             _DictLoader = new PanGu.Dict.DictionaryLoader(sysdir);
