@@ -14,7 +14,7 @@ namespace ML.UI.ClientService
     {
         private static DhtInfoRepository Repository = new DhtInfoRepository();
 
-        private static readonly string TempFilePath = AppDomain.CurrentDomain.BaseDirectory + @"temp\";
+        private static readonly string TempFilePath = AppDomain.CurrentDomain.BaseDirectory + @"temp/";
 
         private static readonly string FilePath = TempFilePath + "pageIndex.txt";
 
