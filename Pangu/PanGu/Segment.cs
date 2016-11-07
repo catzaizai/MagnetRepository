@@ -18,7 +18,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Microsoft.VisualBasic;
+
 using PanGu.Framework;
 
 namespace PanGu
@@ -352,7 +352,7 @@ namespace PanGu
 
                         if (_Options.TraditionalChineseEnabled)
                         {
-                            string simplified = Strings.StrConv(cur.Value.Word, VbStrConv.SimplifiedChinese, 0);
+                            string simplified = Microsoft.VisualBasic.Strings.StrConv(cur.Value.Word, Microsoft.VisualBasic.VbStrConv.SimplifiedChinese, 0);
 
                             if (simplified != cur.Value.Word)
                             {
