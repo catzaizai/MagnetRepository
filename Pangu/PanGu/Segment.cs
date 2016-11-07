@@ -743,21 +743,21 @@ namespace PanGu
                 currentDir = PanGu.Framework.Path.GetAssemblyPath();
             }
             sysdir = Setting.PanGuSettings.Config.GetDictionaryPath(fileName);
-            //IOHelper.WriteLog("path1=" + currentDir);
+            IOHelper.WriteLog("path1=" + currentDir);
             _WordDictionary = new PanGu.Dict.WordDictionary();
             string dir = currentDir + sysdir + "/";
             IOHelper.WriteLog("dir="+dir + "Dict.dct");
             _WordDictionary.Load(dir + "Dict.dct");
 
             _ChsName = new PanGu.Dict.ChsName();
-            //IOHelper.WriteLog("_ChsName1=" + _ChsName);
+            IOHelper.WriteLog("_ChsName1=" + _ChsName);
             _ChsName.LoadChsName(currentDir + sysdir + "/");
-            //IOHelper.WriteLog("_ChsName2=" + _ChsName);
+            IOHelper.WriteLog("_ChsName2=" + _ChsName);
 
             _WordDictionary.ChineseName = _ChsName;
-             //IOHelper.WriteLog("_ChsName3=" + _ChsName);
+             IOHelper.WriteLog("_ChsName3=" + _ChsName);
             _StopWord = new PanGu.Dict.StopWord();
-            //IOHelper.WriteLog("dir=" + dir + "Stopword.txt");
+            IOHelper.WriteLog("dir=" + dir + "Stopword.txt");
             _StopWord.LoadStopwordsDict(dir + "Stopword.txt");
 
             _Synonym = new PanGu.Dict.Synonym();
