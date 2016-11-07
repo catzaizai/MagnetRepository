@@ -30,14 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Dos.PanGu, Version=2.4.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Dos.PanGu.2.4.3.0\lib\net40\Dos.PanGu.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Dos.PanGu.Lucene.Analyzer, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Dos.PanGu.Lucene.Analyzer.2.4.2.0\lib\net40\Dos.PanGu.Lucene.Analyzer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <HintPath>..\..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
       <Private>True</Private>
@@ -61,12 +53,17 @@
     <Compile Include="SearchModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Dos.PanGu.更新日志.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Pangu\PanGu.Lucene.Analyzer\PanGu.Lucene.Analyzer.csproj">
+      <Project>{5a6afb41-632d-46c0-b1ab-eb8b10c70a2a}</Project>
+      <Name>PanGu.Lucene.Analyzer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Pangu\PanGu\PanGu.csproj">
+      <Project>{091e1c60-f77b-45a1-844c-86c5f508b57b}</Project>
+      <Name>PanGu</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ML.Infrastructure.Common\ML.Infrastructure.Common.csproj">
       <Project>{9317fe39-3868-4ce2-97c2-a1180dd0d3c9}</Project>
       <Name>ML.Infrastructure.Common</Name>
