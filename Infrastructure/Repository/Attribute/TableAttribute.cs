@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ML.Infrastructure.Repository.Attribute
+namespace Inf.Repository.Attribute
 {
     [AttributeUsage(AttributeTargets.Class)]
     public class TableAttribute : System.Attribute

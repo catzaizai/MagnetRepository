@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FF3781C7-825A-42CB-B57A-CE54363CFE80}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{5124B205-C5AB-4080-A2E6-F2E96C7E8272}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ML.Infrastructure.Repository</RootNamespace>
-    <AssemblyName>ML.Infrastructure.Repository</AssemblyName>
+    <RootNamespace>UI.ClientService</RootNamespace>
+    <AssemblyName>UI.ClientService</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -30,15 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,22 +47,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attribute\TableAttribute.cs" />
-    <Compile Include="BaseRepository.cs" />
-    <Compile Include="DhtInfoRepository.cs" />
-    <Compile Include="Entity\BaseEntity.cs" />
-    <Compile Include="Entity\DhtInfo.cs" />
-    <Compile Include="Extensions\AttributeExtensions.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ML.Infrastructure.Common\ML.Infrastructure.Common.csproj">
+    <ProjectReference Include="..\..\Domain\Core\Dom.Core.csproj">
+      <Project>{154c4ef3-bb71-4259-88ec-3bfac4c3867c}</Project>
+      <Name>Dom.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain\Model\Dom.Model.csproj">
+      <Project>{77c86529-5c9f-44e7-9242-45993221bc10}</Project>
+      <Name>Dom.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Common\Inf.Common.csproj">
       <Project>{9317fe39-3868-4ce2-97c2-a1180dd0d3c9}</Project>
-      <Name>ML.Infrastructure.Common</Name>
+      <Name>Inf.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Repository\Inf.Repository.csproj">
+      <Project>{ff3781c7-825a-42cb-b57a-ce54363cfe80}</Project>
+      <Name>Inf.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\SearchTool\Inf.SearchTool.csproj">
+      <Project>{5fcaea8b-1dfd-45ec-b37e-0a1b6f6a8e24}</Project>
+      <Name>Inf.SearchTool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\WebApiServers\Inf.WebApiServers.csproj">
+      <Project>{b30c1066-44f3-491f-a563-8e05bf75dd3c}</Project>
+      <Name>Inf.WebApiServers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

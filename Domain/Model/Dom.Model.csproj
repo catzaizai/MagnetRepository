@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{154C4EF3-BB71-4259-88EC-3BFAC4C3867C}</ProjectGuid>
+    <ProjectGuid>{77C86529-5C9F-44E7-9242-45993221BC10}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ML.Domain.Core</RootNamespace>
-    <AssemblyName>ML.Domain.Core</AssemblyName>
+    <RootNamespace>ML.Domain.Model</RootNamespace>
+    <AssemblyName>ML.Domain.Model</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,22 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MegneticManager.cs" />
+    <Compile Include="MegneticModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Infrastructure\ML.Infrastructure.Common\ML.Infrastructure.Common.csproj">
-      <Project>{9317fe39-3868-4ce2-97c2-a1180dd0d3c9}</Project>
-      <Name>ML.Infrastructure.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Infrastructure\ML.Infrastructure.SearchTool\ML.Infrastructure.SearchTool.csproj">
-      <Project>{5fcaea8b-1dfd-45ec-b37e-0a1b6f6a8e24}</Project>
-      <Name>ML.Infrastructure.SearchTool</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ML.Domain.Model\ML.Domain.Model.csproj">
-      <Project>{77c86529-5c9f-44e7-9242-45993221bc10}</Project>
-      <Name>ML.Domain.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ML.Infrastructure.Repository;
-using ML.Infrastructure.Repository.Entity;
-using ML.Infrastructure.SearchTool;
+using Inf.Repository;
+using Inf.Repository.Entity;
+using Inf.SearchTool;
+using Newtonsoft.Json;
 
-namespace ML.UI.ClientService
+namespace UI.ClientService
 {
     class Program
     {
-        private static DhtInfoRepository Repository = new DhtInfoRepository();
+        private static readonly DhtInfoRepository Repository = new DhtInfoRepository();
 
         private static readonly string TempFilePath = AppDomain.CurrentDomain.BaseDirectory + @"temp/";
 
@@ -20,17 +21,29 @@ namespace ML.UI.ClientService
 
         private static bool _isStop = false;
 
-        private const int PageSize = 1000;
+        private static int _pageSize;
+
+        private static int PageSize
+        {
+            get
+            {
+                if (_pageSize == 0)
+                {
+                    var pageSize = ConfigurationManager.AppSettings["PageSize"];
+                    _pageSize = !string.IsNullOrEmpty(pageSize) ? Convert.ToInt32(pageSize) : 1000;
+                }
+                return _pageSize;
+            }
+        }
 
         static void Main(string[] args)
         {
             Start();
-            Console.ReadKey();
         }
 
         private static async void Start()
         {
-            Console.WriteLine("Task is start!");
+            Console.WriteLine("Service is started!");           
             do
             {
                 _isStop = await CreateIndex();
@@ -43,7 +56,7 @@ namespace ML.UI.ClientService
             List<DhtInfo> result;
             try
             {
-                result = Repository.GetList(pageIndex, PageSize);
+                result = Repository.GetList(pageIndex, _pageSize);
             }
             catch (Exception ex)
             {
@@ -97,5 +110,7 @@ namespace ML.UI.ClientService
             }
             File.WriteAllText(FilePath, pageIndex.ToString(), Encoding.UTF8);
         }
+
+
     }
 }

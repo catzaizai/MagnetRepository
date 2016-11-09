@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ML.Infrastructure.Repository;
-using ML.Infrastructure.Repository.Attribute;
-using ML.Infrastructure.Repository.Entity;
-using ML.Infrastructure.Repository.Extensions;
+using Inf.Repository;
+using Inf.Repository.Attribute;
+using Inf.Repository.Entity;
+using Inf.Repository.Extensions;
 using NUnit.Framework;
 
 namespace ML.Test

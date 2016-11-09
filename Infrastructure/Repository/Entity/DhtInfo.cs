@@ -1,7 +1,7 @@
 ﻿using System;
-using ML.Infrastructure.Repository.Attribute;
+using Inf.Repository.Attribute;
 
-namespace ML.Infrastructure.Repository.Entity
+namespace Inf.Repository.Entity
 {
     [Table("dht_info")]
     public class DhtInfo : BaseEntity<int>

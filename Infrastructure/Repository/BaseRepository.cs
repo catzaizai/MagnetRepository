@@ -1,19 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Dapper;
-using ML.Infrastructure.Repository.Attribute;
-using ML.Infrastructure.Repository.Entity;
-using ML.Infrastructure.Repository.Extensions;
+using Inf.Repository.Attribute;
+using Inf.Repository.Entity;
+using Inf.Repository.Extensions;
 using MySql.Data.MySqlClient;
 
-namespace ML.Infrastructure.Repository
+namespace Inf.Repository
 {
     public class BaseRepository<TEntity>
     {
-        protected const string ConnectionStr = "Database=p2pspider;Data Source=localhost;User Id=root;Password=root;pooling=false;CharSet=utf8;port=3306;";
+        private const string DefaultConnectionStr = "Database=p2pspider;Data Source=localhost;User Id=root;Password=root;pooling=false;CharSet=utf8;port=3306;";
+        private string _connectionStr;
+
+        private string ConnectionStr
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_connectionStr))
+                {
+                    _connectionStr = System.Configuration.ConfigurationManager.AppSettings["DbConnectionStr"] ??
+                                 DefaultConnectionStr;
+                }               
+                return _connectionStr;
+            }
+        }
 
         public List<TEntity> GetList(string sql)
         {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ML.Infrastructure.SearchTool;
+using Inf.SearchTool;
 using NUnit.Framework;
 
 namespace ML.Test
