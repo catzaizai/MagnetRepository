@@ -53,10 +53,7 @@
       <HintPath>..\..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\System.dll</HintPath>
-    </Reference>
+    <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -99,14 +96,9 @@
       <Project>{5fcaea8b-1dfd-45ec-b37e-0a1b6f6a8e24}</Project>
       <Name>Inf.SearchTool</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Infrastructure\WebApiServers\Inf.WebApiServers.csproj">
-      <Project>{b30c1066-44f3-491f-a563-8e05bf75dd3c}</Project>
-      <Name>Inf.WebApiServers</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="lib\System.dll" />
-    <Content Include="lib\System.Net.Http.dll" />
+    <Folder Include="lib\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

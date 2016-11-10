@@ -74,10 +74,6 @@
       <Project>{5fcaea8b-1dfd-45ec-b37e-0a1b6f6a8e24}</Project>
       <Name>Inf.SearchTool</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Infrastructure\WebApiServers\Inf.WebApiServers.csproj">
-      <Project>{b30c1066-44f3-491f-a563-8e05bf75dd3c}</Project>
-      <Name>Inf.WebApiServers</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
