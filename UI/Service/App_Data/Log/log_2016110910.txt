@@ -1,0 +1,36 @@
+﻿2016-11-09 10:14:12
+path1=D:\Test\MegneticLucene\UI\ClientService\bin\Debug\
+
+2016-11-09 10:14:12
+dir=D:\Test\MegneticLucene\UI\ClientService\bin\Debug\Dict/Dict.dct
+
+2016-11-09 10:14:12
+_ChsName1=PanGu.Dict.ChsName
+
+2016-11-09 10:14:12
+_ChsName2=PanGu.Dict.ChsName
+
+2016-11-09 10:14:12
+_ChsName3=PanGu.Dict.ChsName
+
+2016-11-09 10:14:12
+dir=D:\Test\MegneticLucene\UI\ClientService\bin\Debug\Dict/Stopword.txt
+
+2016-11-09 10:59:11
+path1=D:\Test\MegneticLucene\UI\ClientService\bin\Debug\
+
+2016-11-09 10:59:11
+dir=D:\Test\MegneticLucene\UI\ClientService\bin\Debug\Dict/Dict.dct
+
+2016-11-09 10:59:11
+_ChsName1=PanGu.Dict.ChsName
+
+2016-11-09 10:59:11
+_ChsName2=PanGu.Dict.ChsName
+
+2016-11-09 10:59:11
+_ChsName3=PanGu.Dict.ChsName
+
+2016-11-09 10:59:11
+dir=D:\Test\MegneticLucene\UI\ClientService\bin\Debug\Dict/Stopword.txt
+

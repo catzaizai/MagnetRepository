@@ -1,0 +1,57 @@
+﻿2016-11-07 16:20:06
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict/Dict.dct
+
+2016-11-07 16:21:12
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict/Dict.dct
+
+2016-11-07 16:21:16
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict/Dict.dct
+
+2016-11-07 16:21:19
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict/Dict.dct
+
+2016-11-07 16:21:23
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict/Dict.dct
+
+2016-11-07 16:21:28
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict/Dict.dct
+
+2016-11-07 16:21:32
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict/Dict.dct
+
+2016-11-07 16:21:35
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict/Dict.dct
+
+2016-11-07 16:21:37
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict/Dict.dct
+
+2016-11-07 16:21:41
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict/Dict.dct
+
+2016-11-07 16:22:36
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict/Dict.dct
+
+2016-11-07 16:23:09
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict/Dict.dct
+
+2016-11-07 16:25:57
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict/Dict.dct
+
+2016-11-07 16:26:49
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict/Dict.dct
+
+2016-11-07 16:27:07
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict/Dict.dct
+
+2016-11-07 16:27:42
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict\Dict.dct
+
+2016-11-07 16:28:27
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict\Dict.dct
+
+2016-11-07 16:29:47
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict\Dict.dct
+
+2016-11-07 16:46:02
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict/Dict.dct
+

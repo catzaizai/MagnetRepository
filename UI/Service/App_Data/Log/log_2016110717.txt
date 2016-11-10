@@ -1,0 +1,3 @@
+﻿2016-11-07 17:09:49
+dir=D:\Test\MegneticLucene\UI\ML.UI.ClientService\bin\Debug\Dict/Dict.dct
+
